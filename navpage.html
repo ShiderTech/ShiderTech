@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ShiderTech</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        height: 100%;
+    }
+    .cls1{
+        display: flex;
+        flex-direction: row;
+    }
+    .cls1 img{
+        width: 44px;
+        height: 44px;
+        padding-left: 40px;
+        padding-top: 15px;
+    }
+    .cls1 a{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: 'arial','sans-serif';
+    }
+    .cls1 #mainname{
+        padding-top: 28px;
+        padding-left: 25px;
+    }
+    .forname{
+        padding-top: 28px;
+    }
+    .cls2 a{
+        color: white;
+        display: flex;
+        padding: 20px 0px;
+        padding-left: 50px;
+        text-decoration: none;
+        font-family: 'arial','sans-serif';
+    }
+    .cls2 a:hover{
+        text-decoration: underline;
+    }
+    
+    .forx{
+        display: flex;
+        /* width: 100%; */
+    }
+    span{
+        text-align: end;
+    }
+    .cls1 .forx a{
+        text-align: end;
+        /* width: 100%; */
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .cls1 .forx a span{
+        font-size: 30px;
+    }
+    @media  (max-width:720px){
+        .forx{
+            display: flex;
+        }
+        .cls1 .forx a {
+        color: white;
+        /* width: 100%; */
+        justify-content: end;
+    } 
+}
+</style>
+<body>
+    <div class="cls1">
+        <div class="forimg"><a href="index.html"><img src="ShiderTechLogo.png" alt=""></a></div>
+        <div class="forname"><a href="index.html" id="mainname">ShiderTech</a></div>
+        <div style="width: 100%;"></div>
+        <div style="width: 100%;"></div>
+        <div class="forx"><a href="index.html"><span>X</span></a></div>
+    </div>
+    <div class="cls2">
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Career.html">Careers</a>
+        <a href="Contact.html">Contact Us</a>
+    </div>
+</body>
+</html>
