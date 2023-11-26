@@ -32,6 +32,19 @@ window.__WEBSITE_PROPS__ = {"basePath":"/","websiteId":"2ecf4cec-e721-4832-b17b-
 function openpup(){
     document.querySelector('.pages').style.display='flex';
 }
+
+    let url="https://script.google.com/macros/s/AKfycbzJ3gxeSmY20eSs1PtkDSE0nJ_8vczqoL7Cf2ZsMfh83Q-ZgYwQdh3448ZfmADlVmDO0w/exec";
+    let form = document.querySelector('#form');
+    form.addEventListener("submit",(e) =>{
+        let d = new FormData(form);
+        fetch(url,{
+            method : "POST",
+            body : d
+        }).then((res) => res.text())
+        .then((finalRes) => console.log(finalRes)) 
+        e.preventDefault();
+    })
+
 // let popbtn=document.getElementById('navlinks');
 // let togglebtn=document.getElementsByClassName('toggle-button')[0];
 // togglebtn.addEventListener('click',()=>{
