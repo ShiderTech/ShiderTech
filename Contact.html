@@ -23,11 +23,11 @@
 
   <body>
     
-                            <header class="navbar">
-                                <div id="logosizing">
-                                    <a href="index.html">
-                                        <img src="ShiderTechLogo.png">
-                                    </a>
+        <header class="navbar">
+            <div id="logosizing">
+                    <a href="index.html">
+                            <img src="ShiderTechLogo.png">
+                        </a>
                                 </div>
                                 <div id="mainnameposition">
                                     <a href="index.html">ShiderTech</a>
@@ -42,11 +42,8 @@
                                         <a href="Services.html" id="navbartags">Services</a>
                                         <a href="Career.html" id="navbartags">Careers</a>
                                         <a href="Contact.html" id="navbartags">Contact Us</a>
-                                       
-                                    
-                                </div>
+                                    </div>
                             </header>
-                            
                 <div class="vHyeZ hYueL css-1c375l0">
                     <section class="l7Lyt css-110s01n" id="39e913e8-bbc3-40a2-83ec-ff0ba1dae246">
                         <div class="HvmIt" style="padding-top:120px">
@@ -89,7 +86,9 @@
                                         <div class="Dvr4L">
                                             <div class="ZXF4F">
                                                 <div class="JGXAL YiaJL">
-                                                    <form name="submit-to-google-sheet" aria-label="Contact Form">
+
+                                                    <!-- Contact Us Form Starts Here. -->
+                                                    <form name="SUBMIT" aria-label="Contact Form" id="form">
                                                         <div class="css-35ct3y A8RBL">
                                                             <div class="_0bgWF SzoMv">
                                                                 <div class="nupts _1tvaf q4RJR">
@@ -98,14 +97,14 @@
                                                                 </div>
                                                                 <div class="nupts _1tvaf q4RJR">
                                                                     <label for="senderEmail-abd21c32770a-1" class="+Ec0G">Email address<span class="pc9Qy">Required</span></label>
-                                                                    <input type="email" name="senderEmail" id="senderEmail-abd21c32770a-1" required="" autoComplete="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" class="_1B2Z3" value=""/>
+                                                                    <!-- <input type="email" name="senderEmail" id="senderEmail-abd21c32770a-1" required="" autoComplete="email" pattern="/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/" class="_1B2Z3" value=""/> -->
+                                                                    <input type="email" name="senderEmail" id="senderEmail-abd21c32770a-1" required="" autoComplete="email" class="_1B2Z3" value=""/>
                                                                 </div>
                                                                 <div class="nupts _1tvaf q4RJR">
                                                                     <label for="senderTelephone-abd21c32770a-1" class="+Ec0G">Phone number</label>
                                                                     <div class="_1B2Z3 UHfiI">
                                                                         <div class="PhoneInput">
-                                                                            
-                                                                            <input type="tel" autoComplete="tel" id="senderTelephone-abd21c32770a-1" class="PhoneInputInput" value="+91"/>
+                                                                            <input type="tel" name="senderPhoneNumber" autoComplete="tel" id="senderTelephone-abd21c32770a-1" class="PhoneInputInput" value="+91"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -114,11 +113,9 @@
                                                                 <div class="nupts">
                                                                     <label for="message-abd21c32770a-1" class="+Ec0G">Message
                                                                         <span class="pc9Qy">Required</span></label>
-                                                                        <textarea name="message" id="message-abd21c32770a-1" maxLength="5000" required="" class="gqyzb">
-
-                                                                        </textarea>
-                                                                    </div>
+                                                                        <textarea name="message" id="message-abd21c32770a-1" maxLength="5000" required="" class="gqyzb"></textarea>
                                                                 </div>
+                                                            </div>
                                                                 <div class="_0bgWF LsrcQ SzoMv">
                                                                     <div class="_6OU6x" data-testid="static-text-element">
                                                                         <div class="css-35ct3y A8RBL">
@@ -141,7 +138,8 @@
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                        </form>
+                                                            <span id="msg"></span>
+                                                    </form>
                                                     </div>
                                                 </div>
                                             </div>
@@ -220,19 +218,100 @@
             </div>
         </div>
    
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
         <script src="https://kit.fontawesome.com/6dae60b60f.js" crossorigin="anonymous"></script>
         <script src="shidertech.js"></script>
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxokGSh42GdMIurlHKXSjH2divwzGtn1NIAIhbWMkKWb1NTcvVCl8s_wNuNzDaNJRQm/exec'
+        <!-- <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwVtrJfrO_KlgMAp9vL374zfMzE7hYSptS9BwVva6JnwD00gv534-8ZBM_DdwfxN71w/exec'
             const form = document.forms['submit-to-google-sheet']
-          
+            const msg = document.getElementById("msg");
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully";
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                    },5000)
+                    form.reset()
+                })
                 .catch(error => console.error('Error!', error.message))
             })
-          </script>
+        </script> -->
+        <!-- 
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxaY2mrs7-pjyYbquK42MmC35m8ODKwRxqD3NabQhd7/dev'
+                const form = document.forms['SUBMIT']
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+                })
+            </script> -->
+
+<!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaY2mrs7-pjyYbquK42MmC35m8ODKwRxqD3NabQhd7/dev';
+    const form = document.forms['SUBMIT'];
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+  
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          console.log('Success!', response);
+        })
+        .catch(error => console.error('Error!', error));
+    });
+  </script> -->
+  <!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaY2mrs7-pjyYbquK42MmC35m8ODKwRxqD3NabQhd7/dev';
+    const form = document.forms['SUBMIT'];
+    const msg = document.getElementById("msg");
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully";
+            setTimeout(function(){
+                msg.innerHTML = "";
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })  
+</script> -->
+        // fetch(scriptURL, {
+        // method: 'POST',
+        // mode: 'cors',
+        // headers: {
+        //     'Content-Type': 'application/json'
+        // },
+        // body: JSON.stringify({ key: 'value' })
+        // })
+        // .then(response => {
+        //     if (!response.ok) {
+        //     throw new Error('Network response was not ok');
+        //     }
+        //     console.log('Success!', response);
+        // })
+        // .catch(error => console.error('Error!', error));
+
+<script>
+    let url="https://script.google.com/macros/s/AKfycbzJ3gxeSmY20eSs1PtkDSE0nJ_8vczqoL7Cf2ZsMfh83Q-ZgYwQdh3448ZfmADlVmDO0w/exec";
+    let form = document.querySelector('#form');
+    form.addEventListener("submit",(e) =>{
+        let d = new FormData(form);
+        fetch(url,{
+            method : "POST",
+            body : d
+        }).then((res) => res.text())
+        .then((finalRes) => console.log(finalRes)) 
+        e.preventDefault();
+    })
+</script>
 </body>
 </html>
