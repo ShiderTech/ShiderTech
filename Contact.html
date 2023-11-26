@@ -221,70 +221,7 @@
         <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
         <script src="https://kit.fontawesome.com/6dae60b60f.js" crossorigin="anonymous"></script>
         <script src="shidertech.js"></script>
-        <!-- <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwVtrJfrO_KlgMAp9vL374zfMzE7hYSptS9BwVva6JnwD00gv534-8ZBM_DdwfxN71w/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const msg = document.getElementById("msg");
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message Sent Successfully";
-                    setTimeout(function(){
-                        msg.innerHTML = "";
-                    },5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-            })
-        </script> -->
-        <!-- 
-            <script>
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbxaY2mrs7-pjyYbquK42MmC35m8ODKwRxqD3NabQhd7/dev'
-                const form = document.forms['SUBMIT']
-                form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                    .then(response => console.log('Success!', response))
-                    .catch(error => console.error('Error!', error.message))
-                })
-            </script> -->
-
-<!-- <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaY2mrs7-pjyYbquK42MmC35m8ODKwRxqD3NabQhd7/dev';
-    const form = document.forms['SUBMIT'];
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-  
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          console.log('Success!', response);
-        })
-        .catch(error => console.error('Error!', error));
-    });
-  </script> -->
-  <!-- <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaY2mrs7-pjyYbquK42MmC35m8ODKwRxqD3NabQhd7/dev';
-    const form = document.forms['SUBMIT'];
-    const msg = document.getElementById("msg");
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully";
-            setTimeout(function(){
-                msg.innerHTML = "";
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })  
-</script> -->
-
+        
 <script>
     let url="https://script.google.com/macros/s/AKfycbzJ3gxeSmY20eSs1PtkDSE0nJ_8vczqoL7Cf2ZsMfh83Q-ZgYwQdh3448ZfmADlVmDO0w/exec";
     let form = document.querySelector('#form');
