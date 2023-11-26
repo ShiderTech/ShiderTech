@@ -222,18 +222,6 @@
         <script src="https://kit.fontawesome.com/6dae60b60f.js" crossorigin="anonymous"></script>
         <script src="shidertech.js"></script>
         
-<script>
-    let url="https://script.google.com/macros/s/AKfycbzJ3gxeSmY20eSs1PtkDSE0nJ_8vczqoL7Cf2ZsMfh83Q-ZgYwQdh3448ZfmADlVmDO0w/exec";
-    let form = document.querySelector('#form');
-    form.addEventListener("submit",(e) =>{
-        let d = new FormData(form);
-        fetch(url,{
-            method : "POST",
-            body : d
-        }).then((res) => res.text())
-        .then((finalRes) => console.log(finalRes)) 
-        e.preventDefault();
-    })
-</script>
+
 </body>
 </html>
